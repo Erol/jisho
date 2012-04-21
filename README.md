@@ -1,4 +1,4 @@
-# Jisho 綴り
+# Jisho 辞書
 
 [Jisho](http://erol.github.com/jisho) is a Ruby wrapper for [Hunspell](http://hunspell.sourceforge.net/).
 
