@@ -2,6 +2,24 @@
 
 [Jisho](http://erol.github.com/jisho) is a Ruby wrapper for [Hunspell](http://hunspell.sourceforge.net/).
 
+## Usage
+
+If you're not using Bundler, you will need to require Jisho in your application:
+
+    require 'jisho'
+
+You can check for misspelled words by calling `Jisho.check`:
+
+    misspellings = Jisho.check 'Thiis sentence has a misspelled word.'
+
+`Jisho.check` returns an array of hashes, each containing the misspelled word, the row and column where it is located, and the list of suggestions.
+
+    misspellings # => [{:word=>"Thiis", :row=>1, :column=>1, :suggestions=>["Thais", "This", "Thins"]}]
+
+You can also get the unique set of misspelled words:
+
+    misspellings.words # => ["Thiis"]
+
 ## Dependencies
 
 Jisho requires Hunspell and atleast one dictionary. You can install them on Mac OS X via MacPorts:
@@ -29,24 +47,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jisho
-
-## Usage
-
-If you're not using Bundler, you will need to require Jisho in your application:
-
-    require 'jisho'
-
-You can check for misspelled words by calling `Jisho.check`:
-
-    misspellings = Jisho.check 'Thiis sentence has a misspelled word.'
-
-`Jisho.check` returns an array of hashes, each containing the misspelled word, the row and column where it is located, and the list of suggestions.
-
-    misspellings # => [{:word=>"Thiis", :row=>1, :column=>1, :suggestions=>["Thais", "This", "Thins"]}]
-
-You can also get the unique set of misspelled words:
-
-    misspellings.words # => ["Thiis"]
 
 ## Contributing
 
