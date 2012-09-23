@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Jisho by Erol</title>
-    
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -17,17 +17,39 @@
       <header>
         <h1>Jisho</h1>
         <p>Ruby wrapper for Hunspell</p>
+
         <p class="view"><a href="https://github.com/Erol/jisho">View the Project on GitHub <small>Erol/jisho</small></a></p>
+
+
         <ul>
           <li><a href="https://github.com/Erol/jisho/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/Erol/jisho/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Erol/jisho">Fork On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/Erol/jisho">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
         <h1>Jisho 辞書</h1>
 
 <p><a href="http://erol.github.com/jisho">Jisho</a> is a Ruby wrapper for <a href="http://hunspell.sourceforge.net/">Hunspell</a>.</p>
+
+<h2>Usage</h2>
+
+<p>You can check for misspelled words by calling <code>Jisho.check</code>:</p>
+
+<pre><code>require 'jisho'
+
+misspellings = Jisho.check 'Thiis sentence has a misspelled word.'
+</code></pre>
+
+<p><code>Jisho.check</code> returns an array of hashes, each containing the misspelled word, the row and column where it is located, and the list of suggestions.</p>
+
+<pre><code>misspellings # =&gt; [{:word=&gt;"Thiis", :row=&gt;1, :column=&gt;1, :suggestions=&gt;["Thais", "This", "Thins"]}]
+</code></pre>
+
+<p>You can also get the unique set of misspelled words:</p>
+
+<pre><code>misspellings.words # =&gt; ["Thiis"]
+</code></pre>
 
 <h2>Dependencies</h2>
 
@@ -61,28 +83,6 @@
 <p>Or install it yourself as:</p>
 
 <pre><code>$ gem install jisho
-</code></pre>
-
-<h2>Usage</h2>
-
-<p>If you're not using Bundler, you will need to require Jisho in your application:</p>
-
-<pre><code>require 'jisho'
-</code></pre>
-
-<p>You can check for misspelled words by calling <code>Jisho.check</code>:</p>
-
-<pre><code>misspellings = Jisho.check 'Thiis sentence has a misspelled word.'
-</code></pre>
-
-<p><code>Jisho.check</code> returns an array of hashes, each containing the misspelled word, the row and column where it is located, and the list of suggestions.</p>
-
-<pre><code>misspellings # =&gt; [{:word=&gt;"Thiis", :row=&gt;1, :column=&gt;1, :suggestions=&gt;["Thais", "This", "Thins"]}]
-</code></pre>
-
-<p>You can also get the unique set of misspelled words:</p>
-
-<pre><code>misspellings.words # =&gt; ["Thiis"]
 </code></pre>
 
 <h2>Contributing</h2>
