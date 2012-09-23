@@ -4,11 +4,9 @@
 
 ## Usage
 
-If you're not using Bundler, you will need to require Jisho in your application:
+You can check for misspelled words by calling `Jisho.check`:
 
     require 'jisho'
-
-You can check for misspelled words by calling `Jisho.check`:
 
     misspellings = Jisho.check 'Thiis sentence has a misspelled word.'
 
