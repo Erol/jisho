@@ -26,7 +26,7 @@ Jisho requires Hunspell and atleast one dictionary. You can install them on Mac 
 
     port install hunspell hunspell-dict-en_US
 
-Or via HomeBrew:
+Or via Homebrew:
 
     brew install hunspell
 
