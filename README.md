@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/Erol/jisho.png)](https://codeclimate.com/github/Erol/jisho)
+
 # Jisho 辞書
 
 [Jisho](http://erol.github.com/jisho) is a Ruby wrapper for [Hunspell](http://hunspell.sourceforge.net/).
