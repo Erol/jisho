@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/Erol/jisho.png)](https://codeclimate.com/github/Erol/jisho)
+[![Code Climate Score](http://img.shields.io/codeclimate/github/Erol/yomu.svg?style=flat)](https://codeclimate.com/github/Erol/jisho)
 
 # Jisho 辞書
 
